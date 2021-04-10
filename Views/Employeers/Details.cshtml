@@ -1,0 +1,52 @@
+﻿@model HRMVC.Models.Employeer
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center>
+<h1>Details</h1>
+
+
+    <h4>Employeer</h4>
+    <hr />
+    </center>
+    <dt class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.recuritment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.recuritment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.No_ofPost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.No_ofPost)
+        </dd>
+    </div>
+</div>
+    
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Employeerid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+ 

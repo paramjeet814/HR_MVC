@@ -1,0 +1,61 @@
+﻿@model IEnumerable<HRMVC.Models.Employeer>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center>
+<h1>Index</h1>
+
+<p>
+  <button class="alert-heading">  <a asp-action="Create">Create New</a></button>
+</p>
+    </center>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.recuritment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.No_ofPost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recuritment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.No_ofPost)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Employeerid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Employeerid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Employeerid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
